@@ -1,0 +1,70 @@
+.chat-dialog {
+    display: flex;
+    max-width: 620px;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 16px;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.chat-dialog__my-message {
+    align-self: flex-end;
+    background-color: var(--tea-green);
+    color: rgb(0, 0, 0);
+}
+
+.chat-dialog__user-message {
+    align-self: flex-start;
+    background-color: var(--light-nude);
+}
+
+.container-delete-message {
+    display: none;
+    margin-left: 8px;
+}
+
+.chat-dialog:hover .container-delete-message {
+    display: flex;
+}
+
+.options__delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(209, 0, 0);
+    background-color: rgba(255, 0, 0, 0.096);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.chat-dialog__info {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 10px;
+}
+
+.info__time {
+    margin-bottom: 3px;
+}
+
+.chat-dialog__text {
+    padding: 10px;
+}
+
+.statusMessage {
+    font-size: 20px;
+}
+
+.status-visto {
+    color: var(--checkmark-blue);
+}
+
+.status-no-visto {
+    color: rgba(0, 0, 0, 0.192);
+}

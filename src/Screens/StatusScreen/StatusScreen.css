@@ -1,0 +1,164 @@
+.container-status-screen{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section-status{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.header-section{
+    width: 100%;
+}
+
+.header__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:  center;
+    padding: 20px 0;
+}
+
+.header__title h1{
+    font-size: 26px;
+    cursor: default;
+}
+
+.title__buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.title__buttons button{
+    background-color: none;
+    border: 0;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__buttons button .icon{
+    background-color: none;
+}
+
+.header__my-status{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.my-status__image{
+    position: relative;
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.my-status__image img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.my-status__image .icon{
+    font-size: 24px;
+    position: absolute;
+    z-index: 0;
+    color: var(--light-green);
+    bottom: 0;
+    right: 0;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.my-status__content h3{
+    font-size: 20px;
+}
+
+.my-status__content span{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.544);
+}
+
+.container-main-footer{
+    overflow-y: auto;
+}
+
+.main-status{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-status__recent{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--light-green);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container-status-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-status__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 600px;
+}
+
+.main-content__icon{
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main-content__title{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-content__text{
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.500);
+    padding-bottom: 30px;
+}
+
+.footer-status{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.500);
+}
+

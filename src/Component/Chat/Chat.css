@@ -1,0 +1,45 @@
+.container-alert{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.alert-encryption{
+    background-color: rgba(248, 230, 160, 0.884);
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.726);
+    line-height: 1.5rem;
+}
+
+.alert-encryption_icon{
+    color: black;
+}
+
+.alert-encryption_more-info{
+    color: black;
+    font-weight: bold;
+}
+
+.chat-day{
+    background-color: rgba(255, 255, 255, 0.744);
+    padding: 2px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.container-chat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 20px;
+}

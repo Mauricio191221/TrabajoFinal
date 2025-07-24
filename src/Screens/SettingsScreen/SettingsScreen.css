@@ -1,0 +1,5 @@
+.container-settings-screen{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}

@@ -1,0 +1,225 @@
+.contact-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--light-nude);
+    padding-bottom: 80px;
+}
+
+.contact-detail__header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f5f2c7;
+    backdrop-filter: blur(20px);        
+    -webkit-backdrop-filter: blur(20px); 
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__arrow-back{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+}
+
+.header__title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header__edit-button{
+    background: none;
+    border: none;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+
+.edit-button__text{
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.085);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 12px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none; 
+    transition: opacity 0.3s ease;
+    min-width: max-content;
+}
+
+.header__edit-button:hover .edit-button__text{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.header__edit-button:hover{
+    background-color: rgba(0, 0, 0, 0.085);
+    border-radius: 50%;
+    transition: 0.4s ease ;    
+}
+
+.contact-detail__header.scrolled{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.126);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.078);
+}
+
+.contact-detail__user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 90px;
+}
+
+.user__img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    border-radius: 50%;
+}
+
+.user__name{
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+.user__phone{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.585);
+}
+
+.contact-detail__contact-actions{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+.contact-detail__contact-actions button{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+}
+
+.contact-actions__button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contact-actions__button:hover{
+    background-color: #dbd6ce10;
+    transition: 0.5s ease-out  1s;
+}
+
+.contact-actions__button .icon{
+    font-size: 20px;
+    color: var(--light-green);
+}
+
+.contact-detail__state{
+    background-color: white;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.contact-detail__button-group{
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.contact-detail__button-group li{
+    width: 100%;
+}
+
+.contact-detail__button-group li:hover{
+    background-color: #dbd6ce10;
+    transition: 0.5s ease-out  1s;
+}
+
+.contact-detail__button-group button{
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.button-group__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.button-group__text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.073);
+}
+
+.button-group__text--last-text{
+    border-bottom: none;
+}
+
+.text__icon-arrow{
+    padding-right: 20px;
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.button-group__contact-opcions{
+    font-size: 16px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    color: var(--light-green);
+}
+
+.contact-opcions--red{
+    color: red;
+}

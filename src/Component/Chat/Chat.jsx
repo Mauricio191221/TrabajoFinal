@@ -1,27 +1,38 @@
 import React, { useContext } from 'react'
 import Message from '../Message/Message'
 import { MessagesContext } from '../../Context/MessagesContext'
+import { HiLockClosed } from "react-icons/hi";
+import '../Chat/Chat.css'
 
 export default function Chat() {
     const {messages} = useContext(MessagesContext)
     if(messages.length === 0){
         return (
-            <div>
-                <span>No hay mensajes!</span>
+            <div className='container-alert'>
+                <div className='alert-encryption'>
+                    <span>
+                        <HiLockClosed className='alert-encryption_icon'/> 
+                        Los mensajes y las llamadas están cifrados de extremo a extremo. Solo las personas en este chat pueden leerlos, escucharlos o compartirlos.
+                    </span>
+                    <span className='alert-encryption_more-info'>
+                        Más información
+                    </span>
+                </div>
             </div>
         )
     }
     return (
-        <div>
+        <div className='container-chat'>
+            <span className='chat-day'>Hoy</span>
             {
                 messages.map((message) => {
                     return (
                         <Message 
                             key={message.id} 
-                            emisor={message.emisor}
+                            from={message.from}
                             id={message.id}
-                            hora={message.hora}
-                            texto={message.texto}
+                            time={message.time}
+                            text={message.text}
                             status={message.status}
                         />
                     )

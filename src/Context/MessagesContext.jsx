@@ -10,7 +10,7 @@ export const MessagesContext = createContext(
         messages: [],
         isMessagesLoading: true, 
         addNewMessage: (text) => { },
-        handleEliminarMensaje: (id_mensaje) => { },
+        handleDeleteMessage: (id_message) => { },
         loadMessages: (contact_id) => {},
     }
 )
@@ -23,18 +23,18 @@ const MessagesContextProvider = ({ children }) => {
     const [isMessagesLoading, setIsMessagesLoading] = useState(true)
 
 
-    const handleEliminarMensaje = (id_mensaje) => {
-        const listaMensajeActualizada = []
-        for (const mensaje of messages) {
-            if (mensaje.id !== id_mensaje) {
-                listaMensajeActualizada.push(mensaje)
+    const handleDeleteMessage = (id_message) => {
+        const updateMessageList = []
+        for (const message of messages) {
+            if (message.id !== id_message) {
+                updateMessageList.push(message)
             }
         }
-        setMessages(listaMensajeActualizada)
+        setMessages(updateMessageList)
     }
     const addNewMessage = (text) => {
         //Esta funcion actualiza el estado de mensajes para agregar un nuevo mensaje
-        const new_message = { emisor: 'YO', hora: '23:13', texto: text, status: 'no-recibido', id: messages.length + 1 }
+        const new_message = { from: 'YO', time: '23:13', text: text, status: 'no-visto', id: messages.length + 1 }
         const clon_messages = [...messages]
         clon_messages.push(new_message)
         setMessages(clon_messages)
@@ -63,7 +63,7 @@ const MessagesContextProvider = ({ children }) => {
                     messages: messages,
                     isMessagesLoading: isMessagesLoading, 
                     addNewMessage: addNewMessage,
-                    handleEliminarMensaje: handleEliminarMensaje,
+                    handleDeleteMessage: handleDeleteMessage,
                     loadMessages: loadMessages
                 }
             }

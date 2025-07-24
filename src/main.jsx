@@ -5,15 +5,16 @@ import MessagesContextProvider from './Context/MessagesContext.jsx'
 import { BrowserRouter } from 'react-router'
 import ContactContextProvider from './Context/ContactContext.jsx'
 import ContactDetailContextProvider from './Context/ContactDetailContext.jsx'
+import '../src/styles/style.css'
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <ContactContextProvider>
-        <MessagesContextProvider >
-            <ContactDetailContextProvider>
-            <App />
-            </ContactDetailContextProvider>
-        </MessagesContextProvider>
+            <MessagesContextProvider >
+                <ContactDetailContextProvider>
+                    <App />
+                </ContactDetailContextProvider>
+            </MessagesContextProvider>
         </ContactContextProvider>
     </BrowserRouter>
 

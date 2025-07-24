@@ -1,0 +1,4 @@
+.container-profile-screen{
+    display: flex;
+    flex-direction: row;
+}

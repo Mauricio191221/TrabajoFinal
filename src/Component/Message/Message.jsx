@@ -1,30 +1,43 @@
 import React, { useContext } from 'react'
 import { MessagesContext } from '../../Context/MessagesContext'
+import { BiCheckDouble } from "react-icons/bi";
+import { IoTrashOutline } from "react-icons/io5";
+import '../Message/Message.css'
 
-export default function Message({ emisor, hora, id, texto, status}) {
-    //Mostrar por consola el dato guardado en el contexto de mensajes
-    //useContext es una funcion de react que me permite usar un contexto
-    //Recibe por parametro el contexto a consumir
-    //useContext devuelve el valor del la propiedad value del contexto proveedor
-    /* const result = useContext(MessagesContext)
-    console.log(result) */
-    const {handleEliminarMensaje} = useContext(MessagesContext)
-
+export default function Message({ from, time, id, text, status}) {
+    const {handleDeleteMessage} = useContext(MessagesContext)
     const classNames = {
         message: 'chat-dialog'
     }
-    if(emisor === 'YO'){
+    if(from === 'YO'){
         classNames.message = classNames.message + ' chat-dialog__my-message'
     }
+    else{
+        classNames.message = classNames.message + ' chat-dialog__user-message'
+    }
+
+    const statusMessage = {
+        'visto': <BiCheckDouble className='statusMessage status-visto'/>,
+        'no-visto': <BiCheckDouble className='statusMessage status-no-visto'/>
+    }
+
     return (
-        <div className={classNames.message}>
-            <span> {texto} </span>
-            <div>
-                <span>{hora}</span>
-                <span >{status}</span>
-                {/* Nos interesa pasar una funcion anonima cuando queremos pasarle un parametro a x funcion */}
-                <button onClick={() => {handleEliminarMensaje(id)}} >Eliminar</button>
+            <div className={classNames.message}>
+                <span className='chat-dialog__text'>
+                    {text}
+                </span>
+                <div className='chat-dialog__info'>
+                    <span className='info__time'>
+                        {time}
+                    </span>
+                    {from === 'YO' && statusMessage[status]}
+                </div>
+                <div className='container-delete-message'>
+                    <button onClick=
+                        {() =>  {handleDeleteMessage(id)}} className='options__delete'>
+                            <IoTrashOutline />
+                    </button>
+                </div>
             </div>
-        </div>
     )
 }

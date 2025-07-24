@@ -1,6 +1,9 @@
-.container-home-screen{
+.container-channels-screen{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    position: relative;
 }
+
+.container-section{
+    width: 100%;
+}
+

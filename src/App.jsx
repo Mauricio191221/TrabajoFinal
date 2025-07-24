@@ -5,6 +5,11 @@ import ContactScreen from './Screens/ContactScreen/ContactScreen'
 import ContactDetailScreen from './Screens/ContactDetailScreen/ContactDetailScreen'
 import { getContactList } from './services/contactService.js'
 import { getMessagesByContactId } from './services/messagesService.js'
+import StatusScreen from './Screens/StatusScreen/StatusScreen.jsx'
+import ChannelsScreen from './Screens/ChannelsScreen/ChannelsScreen.jsx'
+import CommunitiesScreen from './Screens/CommunitiesScreen/CommunitiesScreen.jsx'
+import SettingsScreen from './Screens/SettingsScreen/SettingsScreen.jsx'
+import ProfileScreen from './Screens/ProfileScreen/ProfileScreen.jsx'
 
 function App() {
 	
@@ -12,15 +17,14 @@ function App() {
 
 	return (
 		<div>
-			
 			<Routes>
 				<Route
 					path='/' 
-					element={<ContactScreen/>} 
+					element={<HomeScreen/>} 
 				/>
 				<Route
 					path='/contacts/:contact_id/messages' /* Configuramos el prametro de busqueda :contact_id */
-					element={<HomeScreen/>} 
+					element={<ContactScreen/>} 
 				/>
 				<Route 
 					path='/contacts'
@@ -29,6 +33,26 @@ function App() {
 				<Route
 					path='/contacts/:contact_id/detail'
 					element={<ContactDetailScreen/>}
+				/>
+				<Route
+					path='/News'
+					element={<StatusScreen/>}
+				/>
+				<Route
+					path='/Channels'
+					element={<ChannelsScreen/>}
+				/>
+				<Route
+					path='/Communities'
+					element={<CommunitiesScreen/>}
+				/>
+				<Route
+					path='/Settings'
+					element={<SettingsScreen/>}
+				/>
+				<Route
+					path='/Profile'
+					element={<ProfileScreen/>}
 				/>
 			</Routes>
 		</div>

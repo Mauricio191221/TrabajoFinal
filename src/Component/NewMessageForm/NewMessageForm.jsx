@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { MessagesContext } from '../../Context/MessagesContext'
+import { IoSend } from "react-icons/io5";
+import '../NewMessageForm/NewMessageForm.css'
 
 export default function NewMessageForm() {
     /* const result = useContext(MessagesContext)
@@ -15,12 +17,14 @@ export default function NewMessageForm() {
         //e.target.reset()
     }
     return (
-        <form onSubmit={handleSubmitNewMessage}>
-            <div>
-                <label htmlFor="text">Nuevo mensaje:</label>
-                <textarea id='text' name='text' minLength={5} required ></textarea>
+        <form onSubmit={handleSubmitNewMessage} className='form-new-message'>
+            <div className='container-text'>
+                <label htmlFor="text"></label>
+                <textarea id='text' name='text' minLength={1} required className='textarea-new-message'placeholder='Escribe un mensaje'></textarea>
             </div>
-            <button type='submit'>Enviar mensaje</button>
+            <button type='submit' className='button-send'>
+                <IoSend className='button-send_icon'/>
+            </button>
         </form>
     )
 }
