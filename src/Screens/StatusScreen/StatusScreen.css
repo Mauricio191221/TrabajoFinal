@@ -1,7 +1,6 @@
 .container-status-screen{
     display: flex;
     flex-direction: row;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -9,7 +8,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0px 30px;
+    overflow: hidden;
 }
 
 .header-section{
@@ -92,6 +92,9 @@
 
 .container-main-footer{
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-status{
@@ -113,6 +116,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .main-status__content{

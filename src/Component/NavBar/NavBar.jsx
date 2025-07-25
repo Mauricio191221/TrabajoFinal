@@ -28,21 +28,6 @@ const NavBar = () => {
                     }
                 </NavLink>
 
-                <NavLink to="/Calls" className="link link-calls">
-                    {
-                        ({ isActive }) => (
-                            <button className="nav-button">
-                                {isActive ? (
-                                    <IoCall className="icon on" />
-                                    ) : (
-                                    <IoCallOutline className="icon off" />
-                                )}
-                                <span className="nav-text">Llamadas</span>
-                            </button>
-                        )  
-                    }
-                </NavLink>
-
                 <NavLink to="/News" className="link link-news">
                     {
                         ({ isActive }) => (
@@ -90,6 +75,22 @@ const NavBar = () => {
             </div>
 
             <div>
+                <NavLink to="/Channels" className="link link-channels--setting">
+                    {
+                        ({ isActive }) => (
+                            <button className="nav-button">
+                                {isActive ? (
+                                    <PiBroadcastBold className="icon on" />
+                                    ) : (
+                                    <PiBroadcast className="icon off" />
+                                )}
+                                <span className="nav-text">Canales</span>
+                            </button>
+                        )
+                    }
+                </NavLink>
+
+
                 <NavLink to="/Settings" className="link link-settings">
                     {
                         ({ isActive }) => (
@@ -100,21 +101,6 @@ const NavBar = () => {
                                     <PiGearFine className="icon off" />
                                 )}
                                 <span className="nav-text">Ajustes</span>
-                            </button>
-                        )
-                    }
-                </NavLink>
-
-                <NavLink to="/Profile" className="link link-profile">
-                    {
-                        ({ isActive }) => (
-                            <button className="nav-button">
-                                {isActive ? (
-                                    <BiSolidUserCircle className="icon on" />
-                                    ) : (
-                                    <BiUserCircle className="icon off" />
-                                )}
-                                <span className="nav-text">Perfil</span>
                             </button>
                         )
                     }

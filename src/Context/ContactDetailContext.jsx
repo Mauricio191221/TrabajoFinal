@@ -26,7 +26,6 @@ const ContactDetailContextProvider = ({children}) => {
     }
     return (
         <ContactDetailContext.Provider
-
             value={
                 {
                     contact_detail: contact_detail,

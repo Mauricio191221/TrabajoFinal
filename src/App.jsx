@@ -8,8 +8,7 @@ import { getMessagesByContactId } from './services/messagesService.js'
 import StatusScreen from './Screens/StatusScreen/StatusScreen.jsx'
 import ChannelsScreen from './Screens/ChannelsScreen/ChannelsScreen.jsx'
 import CommunitiesScreen from './Screens/CommunitiesScreen/CommunitiesScreen.jsx'
-import SettingsScreen from './Screens/SettingsScreen/SettingsScreen.jsx'
-import ProfileScreen from './Screens/ProfileScreen/ProfileScreen.jsx'
+import SettingsScreen from './Screens/SettingsScreen/SettingsScreen.jsx';
 
 function App() {
 	return (
@@ -20,7 +19,7 @@ function App() {
 					element={<HomeScreen />}
 				/>
 				<Route
-					path='/contacts/:contact_id/messages' /* Configuramos el prametro de busqueda :contact_id */
+					path='/contacts/:contact_id/messages'
 					element={<ContactScreen />}
 				/>
 				<Route
@@ -46,10 +45,6 @@ function App() {
 				<Route
 					path='/Settings'
 					element={<SettingsScreen />}
-				/>
-				<Route
-					path='/Profile'
-					element={<ProfileScreen />}
 				/>
 			</Routes>
 		</div>

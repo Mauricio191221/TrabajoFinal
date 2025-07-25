@@ -2,9 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import { getMessagesByContactId } from "../services/messagesService";
 import { useParams } from "react-router";
 
-
-
-//Creamos un contexto con la funcion createContext()
 export const MessagesContext = createContext(
     {
         messages: [],
@@ -15,14 +12,9 @@ export const MessagesContext = createContext(
     }
 )
 
-//children prop: es el contenido que anida mi componente MessagesContextProvider
 const MessagesContextProvider = ({ children }) => {
-
-
     const [messages, setMessages] = useState([])
     const [isMessagesLoading, setIsMessagesLoading] = useState(true)
-
-
     const handleDeleteMessage = (id_message) => {
         const updateMessageList = []
         for (const message of messages) {
@@ -32,8 +24,8 @@ const MessagesContextProvider = ({ children }) => {
         }
         setMessages(updateMessageList)
     }
+
     const addNewMessage = (text) => {
-        //Esta funcion actualiza el estado de mensajes para agregar un nuevo mensaje
         const new_message = { from: 'YO', time: '23:13', text: text, status: 'no-visto', id: messages.length + 1 }
         const clon_messages = [...messages]
         clon_messages.push(new_message)
@@ -41,10 +33,7 @@ const MessagesContextProvider = ({ children }) => {
     }
 
     const loadMessages = (contact_id) => {
-        //Antes de cargar pasamos el cargando a verdadero asi se muestra el loader
         setIsMessagesLoading(true)
-
-        //Dentro de 2 segundos ocurrira esto
         setTimeout(
             () => {
                 const messages = getMessagesByContactId(contact_id)
@@ -53,7 +42,6 @@ const MessagesContextProvider = ({ children }) => {
             },
             1000
         )
-        
     }
 
     return (

@@ -6,7 +6,7 @@ const mook_data = {
             last_time_connected: '19:30',
             img: "https://www.cronista.com/files/image/693/693349/653119db35548.jpg",
             last_message: {
-                text: 'hola'
+                text: 'D`oh!'
             },
             unread_messages: 1,
             messages: [

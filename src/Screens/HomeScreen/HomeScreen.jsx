@@ -15,7 +15,7 @@ export default function ContactScreen() {
 
     return (
         <div className='container-home-screen'>
-            <NavBar/>
+            <NavBar className='nav-bar' />
             <ContactsList className='contact-list'/>
         </div>
     )
