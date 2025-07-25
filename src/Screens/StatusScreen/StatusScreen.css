@@ -45,6 +45,7 @@
 
 .title__buttons button .icon{
     background-color: none;
+    cursor: pointer;
 }
 
 .header__my-status{
@@ -162,7 +163,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.500);
 }
 
+@media screen and (max-width:550px) {
+    .footer-content{
+        flex-direction: column;
+    }
+}

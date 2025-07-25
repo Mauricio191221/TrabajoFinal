@@ -63,7 +63,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 700px;
-    padding: 100px 20px;
+    padding: 60px 20px;
 }
 
 .section-channels__main .container-icon{
@@ -89,12 +89,6 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
-
-.section-channels__footer{
-    padding-top: 30px;
-    padding-bottom: 60px;
-}
-
 .footer__button-discovered{
     padding: 10px 20px;
     border-radius: 30px;
@@ -110,3 +104,11 @@
     background-color: #147442f6;
     transition: all 1s ease-out 0.5s;
 }
+
+@media screen and (max-width:550px) {
+    .channels-title__icon{
+    font-size: 18px;
+}
+}
+
+

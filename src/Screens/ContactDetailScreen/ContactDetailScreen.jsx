@@ -222,7 +222,7 @@ export default function ContactDetailScreen() {
                     </button>
                 </li>
             </ul> 
-            <ul className='contact-detail__button-group'>
+            <ul className='contact-detail__button-group contact-detail__button-group--last-list'>
                 <li>
                     <button className='button-group__contact-opcions'>
                         Añadir a favorito
@@ -238,7 +238,7 @@ export default function ContactDetailScreen() {
                         Bloquear a {contact_detail.name}
                     </button>
                 </li>
-                <li>
+                <li className='last-li'>
                     <button className='button-group__contact-opcions contact-opcions--red'>
                         Eliminar chat
                     </button>
